@@ -1,7 +1,8 @@
 import React from "react";
-import { Text, View, StyleSheet, Image, TouchableNativeFeedback } from "react-native";
+import { View, StyleSheet, Image, TouchableNativeFeedback } from "react-native";
 import { IconBell, IconMessageCircle2, IconUserCircle } from "tabler-icons-react-native";
 import AppleIcon from "src/assets/logos/apple.png";
+import { Text } from "@/theme";
 
 type IHeader = {
   navigation: any;
@@ -14,7 +15,9 @@ const Header = ({ navigation, path }: IHeader) => (
       <TouchableNativeFeedback onPress={() => navigation.navigate(path)}>
         <View style={styles.mainhead}>
           <Image source={AppleIcon} className="w-5 h-6" />
-          <Text className="text-base leading-[21px] font-medium">Hello John</Text>
+          <Text variant="subheaderBold" gap="md">
+            Hello John
+          </Text>
         </View>
       </TouchableNativeFeedback>
       <View style={styles.icon}>

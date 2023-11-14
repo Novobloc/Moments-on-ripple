@@ -1,7 +1,7 @@
-import { Text } from "@/theme";
 import React from "react";
 import { View, TextInput as RNTextInput } from "react-native";
 import { IconInfoCircle } from "tabler-icons-react-native";
+import { Text } from "@/theme";
 
 const TextInput = ({ label, placeholder, error, isValid, ...props }: any) => {
   return (

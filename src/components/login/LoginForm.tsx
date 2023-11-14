@@ -32,7 +32,7 @@ const LoginForm = ({ onPress }: any) => {
 
   return (
     <View>
-      <Text className="text-2xl leading-9 font-semibold mb-1">Login</Text>
+      <Text variant="header">Login</Text>
 
       <TextInput label={"Email"} placeholder={"Enter your email address"} onChangeText={setEmail} error={"Incorrect email format"} isValid />
       <TextInput
@@ -52,7 +52,9 @@ const LoginForm = ({ onPress }: any) => {
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => onPress()}>
-        <Text className="text-sm font-medium text-[#022D2B] mt-4 underline">Forgot password?</Text>
+        <Text color="blackPrimary" marginTop="md" textDecorationLine="underline">
+          Forgot password?
+        </Text>
       </TouchableOpacity>
 
       {error ? <Text style={{ color: "red" }}>{error}</Text> : null}

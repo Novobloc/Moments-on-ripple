@@ -1,9 +1,9 @@
 import React from "react";
-import { StatusBar, View, Text, Dimensions, TouchableOpacity } from "react-native";
+import { StatusBar, View, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import LoginForm from "src/components/login/LoginForm";
 import LoginHeader from "src/components/layout/LoginHeader";
-import { Box } from "@/theme";
+import { Box, Text } from "@/theme";
 
 const Login: React.FC = ({ navigation }: any) => {
   const { height, width } = Dimensions.get("window");
@@ -22,10 +22,12 @@ const Login: React.FC = ({ navigation }: any) => {
             <LoginForm onPress={navigateToForgotScreen} />
 
             <Box flexDirection="row">
-              <Text className="text-sm font-normal text-[#022D2B]">Have an account already?</Text>
+              <Text color="blackPrimary">Have an account already?</Text>
               <TouchableOpacity onPress={() => navigation.navigate("login")}>
                 <Box>
-                  <Text className="ml-1 text-sm font-semibold text-[#022D2B] underline">Log in</Text>
+                  <Text color="blackPrimary" variant="label" marginLeft="sm" textDecorationLine="underline">
+                    Log in
+                  </Text>
                 </Box>
               </TouchableOpacity>
             </Box>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, StatusBar, View, StyleSheet, Dimensions } from "react-native";
+import { StatusBar, View, StyleSheet, Dimensions } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import LoginHeader from "src/components/layout/LoginHeader";
@@ -40,7 +40,6 @@ const Register: React.FC = ({ navigation }: any) => {
   return (
     <View style={styles.modalContainer}>
       <SafeAreaView className="flex-1">
-        {/* <ScrollView showsVerticalScrollIndicator={false}> */}
         <StatusBar barStyle="dark-content" />
         <View style={{ height: height - 120 }}>
           <View style={styles.Container}>
@@ -97,7 +96,6 @@ const Register: React.FC = ({ navigation }: any) => {
             </View>
           </View>
         </View>
-        {/* </ScrollView> */}
       </SafeAreaView>
     </View>
   );

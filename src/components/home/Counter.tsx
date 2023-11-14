@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import React from "react";
+import { View, Button, StyleSheet } from "react-native";
+import { Text } from "@/theme";
 
 const CounterApp = ({ count, setCount }: any) => {
   const incrementCounter = () => {
@@ -12,7 +13,9 @@ const CounterApp = ({ count, setCount }: any) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.counterText}>Counter: {count}</Text>
+      <Text marginBottom="md" variant="header">
+        Counter: {count}
+      </Text>
       <View style={styles.buttonContainer}>
         <Button title="Increment" onPress={incrementCounter} />
         <Button title="Decrement" onPress={decrementCounter} />
@@ -27,10 +30,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 200
-  },
-  counterText: {
-    fontSize: 24,
-    marginBottom: 20
   },
   buttonContainer: {
     flexDirection: "row",

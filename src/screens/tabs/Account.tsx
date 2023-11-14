@@ -3,6 +3,7 @@ import { View, ScrollView, StatusBar, SafeAreaView } from "react-native";
 import Header from "src/components/layout/Header";
 import { useGlobalContext } from "src/context/GlobalContext/GlobalContext";
 import AccountMain from "src/components/account/Main";
+import SendXRP from "src/utils/xrp/SendXRP";
 
 const AccountPage: React.FC = ({ navigation }: any) => {
   const { setAppLoading, appLoading } = useGlobalContext();
@@ -20,6 +21,7 @@ const AccountPage: React.FC = ({ navigation }: any) => {
         <View style={{ paddingTop: 16 }}>
           <Header navigation={navigation} path={"entry"} />
           <AccountMain />
+          <SendXRP />
         </View>
       </ScrollView>
     </SafeAreaView>

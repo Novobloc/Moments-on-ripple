@@ -32,7 +32,8 @@
         "./src/api/*"
       ]
     },
-    "jsx": "react-native"
+    "jsx": "react-native",
+    "allowJs": true
   },
   "include": [
     "**/*.ts",

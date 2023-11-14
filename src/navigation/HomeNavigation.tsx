@@ -1,8 +1,10 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "src/screens/tabs/Home";
+import MintScreen from "src/screens/tabs/Mint";
+import ListScreen from "src/screens/tabs/List";
 import AccountScreen from "src/screens/tabs/Account";
-import { IconHome2, IconSocial } from "tabler-icons-react-native";
+import { IconHome2, IconSocial, IconBrandMinecraft, IconCameraDollar } from "tabler-icons-react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +29,24 @@ const HomeNavigation: React.FC = () => {
           tabBarActiveTintColor: "#FFFFFF"
         }}
       />
-
+      <Tab.Screen
+        name="Mint"
+        component={MintScreen}
+        options={{
+          tabBarIcon: ({ focused }) => <IconBrandMinecraft size={24} color={focused ? "#FFFFFF" : "#828282"} />,
+          tabBarInactiveTintColor: "#828282",
+          tabBarActiveTintColor: "#FFFFFF"
+        }}
+      />
+      <Tab.Screen
+        name="List"
+        component={ListScreen}
+        options={{
+          tabBarIcon: ({ focused }) => <IconCameraDollar size={24} color={focused ? "#FFFFFF" : "#828282"} />,
+          tabBarInactiveTintColor: "#828282",
+          tabBarActiveTintColor: "#FFFFFF"
+        }}
+      />
       <Tab.Screen
         name="Account"
         component={AccountScreen}

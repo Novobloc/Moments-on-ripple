@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "reactnative.expoapp",
-    "slug": "react-native-app",
+    "name": "nftrippled.expoapp",
+    "slug": "nft-rippled-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "scheme": "myapp",
@@ -17,7 +17,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.reactnative.expoapp"
+      "bundleIdentifier": "com.nftrippled.expoapp"
     },
     "android": {
       "adaptiveIcon": {
@@ -31,7 +31,7 @@
         "android.permission.RECORD_AUDIO",
         "android.permission.CAMERA"
       ],
-      "package": "com.reactnative.expoapp"
+      "package": "com.nftrippled.expoapp"
     },
     "web": {
       "bundler": "metro",

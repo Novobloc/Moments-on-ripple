@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import { View, ScrollView, StatusBar, SafeAreaView } from "react-native";
 import Header from "src/components/layout/Header";
 import { useGlobalContext } from "src/context/GlobalContext/GlobalContext";
-import AccountMain from "src/components/account/Main";
-import SendXRP from "src/utils/xrp/SendXRP";
+import ListMain from "src/components/list/Main";
 
-const AccountPage: React.FC = ({ navigation }: any) => {
+const ListPage: React.FC = ({ navigation }: any) => {
   const { setAppLoading, appLoading } = useGlobalContext();
 
   useEffect(() => {
@@ -20,12 +19,11 @@ const AccountPage: React.FC = ({ navigation }: any) => {
         <StatusBar barStyle="dark-content" />
         <View style={{ paddingTop: 16 }}>
           <Header navigation={navigation} path={"entry"} />
-          <AccountMain />
-          <SendXRP />
+          <ListMain />
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default AccountPage;
+export default ListPage;

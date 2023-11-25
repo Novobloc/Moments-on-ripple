@@ -32,11 +32,14 @@
         "./src/api/*"
       ]
     },
-    "jsx": "react-native"
+    "jsx": "react-native",
+    "allowJs": true
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js", // Added to include JavaScript files
+    "**/*.jsx", // Added to include JSX files
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
   ]

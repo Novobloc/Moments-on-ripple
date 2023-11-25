@@ -15,6 +15,7 @@
     "expo-router": "^2.0.10",
     "expo-status-bar": "^1.7.1",
     "nativewind": "^2.0.11",
+    "node-libs-browser": "^2.2.1",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -26,7 +27,9 @@
     "react-native-screens": "~3.22.0",
     "react-native-svg": "^13.14.0",
     "react-native-web": "~0.19.6",
-    "tabler-icons-react-native": "^2.40.0"
+    "tabler-icons-react-native": "^2.40.0",
+    "text-encoding": "^0.7.0",
+    "web3": "^4.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",

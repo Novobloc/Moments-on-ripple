@@ -26,10 +26,11 @@ import "@walletconnect/react-native-compat";
 import { WagmiConfig } from "wagmi";
 import { mainnet, polygon, arbitrum, polygonMumbai } from "viem/chains";
 import { createWeb3Modal, defaultWagmiConfig, Web3Modal } from "@web3modal/wagmi-react-native";
+import { XRPL } from "src/utils/CustomChain";
 
 const Stack = createStackNavigator();
 const projectId = "c0b4df56380357438dc758cd083c9bbb";
-const chains = [mainnet, polygon, arbitrum];
+const chains = [mainnet, polygon, arbitrum, XRPL];
 
 // 2. Create config
 const metadata = {
@@ -50,7 +51,7 @@ createWeb3Modal({
   projectId,
   chains,
   wagmiConfig,
-  defaultChain: polygonMumbai
+  defaultChain: XRPL
 });
 
 export default function App(): JSX.Element {

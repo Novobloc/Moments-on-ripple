@@ -1,13 +1,22 @@
-# Sample Hardhat Project
+# Basic Sample Hardhat Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
+npx hardhat accounts
+
 npx hardhat test
-REPORT_GAS=true npx hardhat test
 npx hardhat node
-npx hardhat run scripts/deploy.ts
+node scripts/sample-script.js
+npx hardhat help
+
+npx hardhat clean
+npx hardhat compile
+npx hardhat run --network polygonMumbai scripts/deploy.ts
+npx hardhat --network polygonMumbai verify {YOUR_DEPLOYED_CONTRACT_ADDRESS}
+
 ```
+
+https://evm-sidechain.xrpl.org/address/0xAa4fd77096922BE5540903C6FD892101Adeb34ce

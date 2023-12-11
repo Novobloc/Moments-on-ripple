@@ -18,7 +18,6 @@ const HomeNavigation: React.FC = () => {
         }
       }}
     >
-   
       <Tab.Screen
         name="List"
         component={ListScreen}
@@ -37,7 +36,6 @@ const HomeNavigation: React.FC = () => {
           tabBarActiveTintColor: "#FFFFFF"
         }}
       />
-     
     </Tab.Navigator>
   );
 };

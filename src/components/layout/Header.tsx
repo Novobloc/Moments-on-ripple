@@ -16,13 +16,12 @@ const Header = ({ navigation, path }: IHeader) => (
         <View style={styles.mainhead}>
           <Image source={AppleIcon} className="w-5 h-6" />
           <Text variant="subheaderBold" gap="md">
-            Hello 
+            NFTRippled
           </Text>
-         
         </View>
       </TouchableNativeFeedback>
       <View style={styles.icon}>
-      <W3mButton />
+        <W3mButton />
       </View>
     </View>
   </View>

@@ -7,6 +7,7 @@ contract AssetRegistry  {
     uint256 timestamp;
     string assetName;
     string assetDescription;
+    string assetImageUrl;
     address owner;
   }
 
@@ -14,15 +15,15 @@ contract AssetRegistry  {
   mapping(address => uint256[]) private assetsByUser;
   uint256 private nextAssetId = 1;
 
-  event AssetCreated(uint256 id, uint256 timestamp, string assetName, string assetDescription, address owner);
+  event AssetCreated(uint256 id, uint256 timestamp, string assetName, string assetDescription, string assetImageUrl, address owner);
 
-  function createAsset(string memory _assetName, string memory _assetDescription) external {
+  function createAsset(string memory _assetName, string memory _assetDescription, string memory _assetImageUrl) external {
     uint256 assetId = nextAssetId++;
-    Asset memory newAsset = Asset(assetId, block.timestamp, _assetName, _assetDescription, msg.sender);
+    Asset memory newAsset = Asset(assetId, block.timestamp, _assetName, _assetDescription, _assetImageUrl, msg.sender);
     assets[assetId] = newAsset;
     assetsByUser[msg.sender].push(assetId);
 
-    emit AssetCreated(assetId, block.timestamp, _assetName, _assetDescription, msg.sender);
+    emit AssetCreated(assetId, block.timestamp, _assetName, _assetDescription, _assetImageUrl, msg.sender);
   }
 
   function getAssets() external view returns (Asset[] memory) {

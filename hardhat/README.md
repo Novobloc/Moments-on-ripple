@@ -19,4 +19,4 @@ npx hardhat --network polygonMumbai verify {YOUR_DEPLOYED_CONTRACT_ADDRESS}
 
 ```
 
-https://evm-sidechain.xrpl.org/address/0xAa4fd77096922BE5540903C6FD892101Adeb34ce
+https://evm-sidechain.xrpl.org/address/0x022c6a6adfA225f625791CDE23f45Aa811e26469

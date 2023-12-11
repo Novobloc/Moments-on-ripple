@@ -4,7 +4,6 @@ import Header from "src/components/layout/Header";
 import { useGlobalContext } from "src/context/GlobalContext/GlobalContext";
 import MintMain from "src/components/mint/Main";
 
-
 const MintPage: React.FC = ({ navigation }: any) => {
   const { setAppLoading, appLoading } = useGlobalContext();
 
@@ -21,7 +20,6 @@ const MintPage: React.FC = ({ navigation }: any) => {
         <View style={{ paddingTop: 16 }}>
           <Header navigation={navigation} path={"entry"} />
           <MintMain />
-         
         </View>
       </ScrollView>
     </SafeAreaView>

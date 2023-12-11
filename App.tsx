@@ -2,8 +2,6 @@ import "./global";
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Login from "src/screens/login/Login";
-import Register from "src/screens/register/Register";
 import Entry from "src/screens/Entry";
 import HomeNavigation from "src/navigation/HomeNavigation";
 import {
@@ -30,7 +28,7 @@ import { XRPL } from "src/utils/CustomChain";
 
 const Stack = createStackNavigator();
 const projectId = "c0b4df56380357438dc758cd083c9bbb";
-const chains = [mainnet, polygon, arbitrum, XRPL];
+const chains = [XRPL];
 
 // 2. Create config
 const metadata = {

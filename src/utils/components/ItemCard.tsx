@@ -20,10 +20,10 @@ const ItemCard = ({ data }: any) => {
           style={{ width: getCardWidth(), height: 150 }}
           className="bg-white rounded-lg overflow-hidden border border-neutral-200 justify-start items-start flex flex-row"
         >
-          <Image className="w-auto" style={{ height: 150, width: 120 }} source={{ uri: data.imageUrl }} />
+          <Image className="w-auto" style={{ height: 150, width: 120 }} source={{ uri: data.assetImageUrl }} />
           <Box paddingHorizontal="md" gap="sm" paddingTop="sm" flexDirection="column">
-            <Text variant="subheaderBold">{data.name}</Text>
-            <Text variant="body">{data.description}</Text>
+            <Text variant="subheaderBold">{data.assetName}</Text>
+            <Text variant="body">{data.assetDescription}</Text>
           </Box>
         </View>
       </TouchableOpacity>

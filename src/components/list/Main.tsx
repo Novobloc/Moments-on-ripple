@@ -4,19 +4,13 @@ import { View, SafeAreaView, StatusBar, Dimensions } from "react-native";
 import { Box, Text } from "@/theme";
 import ItemCard from "src/utils/components/ItemCard";
 
-const WelcomeTitle = () => (
-  <Box paddingTop="xl">
-    <Text variant="headerMedium">Welcome to List Page</Text>
-  </Box>
-);
-
 const imageData = {
   imageUrl: "https://avatars.githubusercontent.com/u/52450973?v=4",
   name: "My DP",
   description: "This is my favorite image"
 };
 
-const ListMain: React.FC = () => {
+const ListMain = ({ assets }: any) => {
   const { width } = Dimensions.get("window");
   return (
     <ScrollView>
@@ -25,9 +19,11 @@ const ListMain: React.FC = () => {
         <Box flexDirection="row" alignItems="center" justifyContent="space-between" marginHorizontal="md" width={width}>
           <View style={{ width: width - 40 }}>
             <Box flexDirection="column" justifyContent="space-between" flex={1} gap="lg" marginTop="md">
-              <ItemCard data={imageData} />
-              <ItemCard data={imageData} />
-              <ItemCard data={imageData} />
+              {assets &&
+                assets.length > 0 &&
+                assets.map((assetItem: any) => {
+                  return <ItemCard data={assetItem} />;
+                })}
             </Box>
           </View>
         </Box>

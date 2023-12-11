@@ -17,7 +17,17 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nftrippled.expoapp"
+      "bundleIdentifier": "com.nftrippled.expoapp",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "metamask",
+          "trust",
+          "safe",
+          "rainbow",
+          "uniswap"
+          // Add other wallet schemes names here
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {

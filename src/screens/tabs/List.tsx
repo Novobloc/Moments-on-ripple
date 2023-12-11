@@ -5,6 +5,7 @@ import ListMain from "src/components/list/Main";
 import { http, createPublicClient } from "viem";
 import { wagmiContract } from "src/ethers/contract";
 import { XRPL } from "src/utils/CustomChain";
+import { useFocusEffect } from "@react-navigation/native";
 
 const ListPage: React.FC = ({ navigation }: any) => {
   const [assets, setAssets]: any = useState([]);
@@ -14,28 +15,28 @@ const ListPage: React.FC = ({ navigation }: any) => {
     transport: http()
   });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const [assetsData] = await Promise.all([
-          client.readContract({
-            ...wagmiContract,
-            functionName: "getAssets"
-          })
-        ]);
-        console.log(assetsData, "assetsData");
-        setAssets(assetsData);
+  useFocusEffect(
+    React.useCallback(() => {
+      const fetchData = async () => {
+        try {
+          const [assetsData] = await Promise.all([
+            client.readContract({
+              ...wagmiContract,
+              functionName: "getAssets"
+            })
+          ]);
+          console.log(assetsData, "assetsData");
+          setAssets(assetsData);
 
-        // Do something with the data (e.g., set state or perform other actions)
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+          // Do something with the data (e.g., set state or perform other actions)
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
 
-    fetchData(); // Call the async function
-
-    return () => {};
-  }, []);
+      fetchData(); // Call the async function
+    }, [])
+  );
 
   return (
     <SafeAreaView className="bg-[#F0F6F0]  flex-1">

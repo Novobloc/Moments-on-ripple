@@ -43,7 +43,7 @@ const Entry: React.FC = ({ navigation }: any) => {
               Capturing Timeless Moments, One Frame at a Time
             </Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate("register")}>
+            <TouchableOpacity>
               <View className="p-4 mt-6 bg-[#000000] items-center rounded-md">
                 <W3mButton label={"Connect Wallet"} connectStyle={{ backgroundColor: "black" }} />
               </View>

@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.7.0 <0.9.0;
-import "./Owner.sol";
+pragma solidity 0.8.20;
 
-contract AssetRegistry is Owner {
+contract AssetRegistry  {
   struct Asset {
     uint256 id;
     uint256 timestamp;

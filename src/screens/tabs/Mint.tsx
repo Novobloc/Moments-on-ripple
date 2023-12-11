@@ -3,7 +3,7 @@ import { View, ScrollView, StatusBar, SafeAreaView } from "react-native";
 import Header from "src/components/layout/Header";
 import { useGlobalContext } from "src/context/GlobalContext/GlobalContext";
 import MintMain from "src/components/mint/Main";
-import { W3mButton } from "@web3modal/wagmi-react-native";
+
 
 const MintPage: React.FC = ({ navigation }: any) => {
   const { setAppLoading, appLoading } = useGlobalContext();

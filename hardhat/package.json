@@ -1,3 +1,35 @@
 {
-  "name": "hardhat-project"
+  "name": "nft-rippled-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "2.0.1",
+    "@nomicfoundation/hardhat-ethers": "3.0.4",
+    "@nomicfoundation/hardhat-verify": "1.0.4",
+    "chai": "4.3.7",
+    "dotenv": "16.3.1",
+    "eslint": "8.45.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "16.0.1",
+    "eslint-plugin-promise": "6.1.1",
+    "ethers": "6.6.5",
+    "hardhat": "2.17.0",
+    "hardhat-deploy": "0.11.34",
+    "hardhat-gas-reporter": "1.0.9",
+    "rimraf": "5.0.1",
+    "solhint": "3.4.1",
+    "solidity-coverage": "0.8.4",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat-dependency-compiler": "1.1.3"
+  }
 }

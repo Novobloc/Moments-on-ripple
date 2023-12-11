@@ -18,3 +18,5 @@ npx hardhat run --network polygonMumbai scripts/deploy.ts
 npx hardhat --network polygonMumbai verify {YOUR_DEPLOYED_CONTRACT_ADDRESS}
 
 ```
+
+https://evm-sidechain.xrpl.org/address/0xAa4fd77096922BE5540903C6FD892101Adeb34ce

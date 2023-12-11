@@ -4,13 +4,7 @@ import { View, SafeAreaView, StatusBar, Dimensions } from "react-native";
 import { Box, Text } from "@/theme";
 import UploadPicture from "src/utils/components/UploadPicture";
 
-const WelcomeTitle = () => (
-  <Box paddingTop="xl">
-    <Text variant="headerMedium">Welcome to Mint Page</Text>
-  </Box>
-);
-
-const MintMain: React.FC = () => {
+const MintMain = ({ mint, isLoading, isSuccess, data }: any) => {
   const { width } = Dimensions.get("window");
   return (
     <ScrollView>
@@ -19,7 +13,7 @@ const MintMain: React.FC = () => {
         <Box flexDirection="row" alignItems="center" justifyContent="space-between" marginHorizontal="md" width={width}>
           <View style={{ width: width - 40 }}>
             <Box flexDirection="column" justifyContent="space-between" flex={1} gap="lg">
-              <UploadPicture />
+              <UploadPicture mint={mint} isLoading={isLoading} isSuccess={isSuccess} data={data} />
             </Box>
           </View>
         </Box>

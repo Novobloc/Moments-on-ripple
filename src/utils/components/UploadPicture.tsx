@@ -3,11 +3,10 @@ import { Button, Image, View, Platform, TouchableOpacity } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { Text } from "@/theme";
 
-export default function UploadPicture() {
+export default function UploadPicture({ mint, isLoading, isSuccess, data }: any) {
   const [image, setImage] = useState(null);
 
   const pickImage = async () => {
-    // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -27,11 +26,18 @@ export default function UploadPicture() {
       <Button title="Pick an image from camera roll" onPress={pickImage} />
       {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
 
-      <TouchableOpacity>
-        <View className="p-4 bg-[#000000] items-center rounded-md mt-6 px-16">
-          <Text className="text-base font-semibold text-white">Upload</Text>
+      <TouchableOpacity onPress={() => mint()} disabled={!mint || isLoading}>
+        <View style={{ padding: 16, backgroundColor: "#000000", alignItems: "center", borderRadius: 8, marginTop: 6 }}>
+          <Text style={{ fontSize: 16, fontWeight: "bold", color: "white" }}>Upload</Text>
         </View>
       </TouchableOpacity>
+
+      {isSuccess && (
+        <Text>
+          Successfully minted your NFT!
+          {data?.hash}
+        </Text>
+      )}
     </View>
   );
 }

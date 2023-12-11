@@ -4,12 +4,6 @@ import { View, SafeAreaView, StatusBar, Dimensions } from "react-native";
 import { Box, Text } from "@/theme";
 import ItemCard from "src/utils/components/ItemCard";
 
-const imageData = {
-  imageUrl: "https://avatars.githubusercontent.com/u/52450973?v=4",
-  name: "My DP",
-  description: "This is my favorite image"
-};
-
 const ListMain = ({ assets }: any) => {
   const { width } = Dimensions.get("window");
   return (

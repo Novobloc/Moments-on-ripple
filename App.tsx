@@ -80,8 +80,6 @@ export default function App(): JSX.Element {
             <NavigationContainer>
               <Stack.Navigator initialRouteName="entry">
                 <Stack.Screen name="entry" component={Entry} options={{ headerShown: false, animationEnabled: false }} />
-                <Stack.Screen name="login" component={Login} options={{ headerShown: false, animationEnabled: false }} />
-                <Stack.Screen name="register" component={Register} options={{ headerShown: false, animationEnabled: false }} />
                 <Stack.Screen name="home" component={HomeNavigation} options={{ headerShown: false, animationEnabled: false }} />
               </Stack.Navigator>
             </NavigationContainer>

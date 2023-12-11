@@ -8,7 +8,7 @@
     "userInterfaceStyle": "automatic",
     "backgroundColor": "#ffffff",
     "splash": {
-      "image": "./src/assets/images/apple-music.png",
+      "image": "./src/assets/images/home-logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,10 +22,7 @@
         "LSApplicationQueriesSchemes": [
           "metamask",
           "trust",
-          "safe",
-          "rainbow",
-          "uniswap"
-          // Add other wallet schemes names here
+          "safe"
         ]
       }
     },

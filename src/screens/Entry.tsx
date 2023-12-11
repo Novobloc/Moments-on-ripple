@@ -2,6 +2,7 @@ import React from "react";
 import { StatusBar, View, StyleSheet, Image, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text } from "@/theme";
+import { W3mButton } from "@web3modal/wagmi-react-native";
 
 const Entry: React.FC = ({ navigation }: any) => {
   const { height, width } = Dimensions.get("window");
@@ -13,40 +14,25 @@ const Entry: React.FC = ({ navigation }: any) => {
         <View style={{ height: height - 120 }}>
           <TouchableOpacity onPress={() => navigation.navigate("home")}>
             <View style={styles.mainContainers}>
-              <Image style={{ width, height: 132 }} source={require("src/assets/images/apple.png")} />
+              <Image style={{ width, height: 180 }} source={require("src/assets/images/home-logo.png")} />
             </View>
           </TouchableOpacity>
           <View style={styles.subContainer}>
             <Text variant="headerLarge" color="anchorGreenDark">
-              Build with
+            Embrace
             </Text>
             <Text variant="headerLarge" color="anchorGreenDark">
-              React Native
+            the Present
             </Text>
             <Text variant="body" color="anchorGreenDark" paddingTop="md">
-              We are building react native apps using expo
+            Capturing Timeless Moments, One Frame at a Time
             </Text>
 
             <TouchableOpacity onPress={() => navigation.navigate("register")}>
               <View className="p-4 mt-6 bg-[#000000] items-center rounded-md">
-                <Text variant="subheader" color="white">
-                  Create an account
-                </Text>
+              <W3mButton label={"Connect Wallet"} connectStyle={{ backgroundColor:"black"    }}/>
               </View>
             </TouchableOpacity>
-
-            <View style={styles.haveAccount}>
-              <Text variant="body" color="anchorGreenDark">
-                Have an account already?
-              </Text>
-              <TouchableOpacity onPress={() => navigation.navigate("login")}>
-                <View>
-                  <Text variant="bodyBold" color="blackPrimary" className="underline ml-1">
-                    Log in
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            </View>
           </View>
         </View>
       </SafeAreaView>
@@ -61,7 +47,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "#F0F6F0"
+    backgroundColor: "#fff",
   },
   mainContainers: {
     flexDirection: "row",
@@ -78,4 +64,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: 32
   }
+  ,
+  haveAccountText: {
+    color: "#000",
+    fontSize: 16,
+    fontFamily: "Poppins_400Regular"
+  },
 });

@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet, Image, TouchableNativeFeedback } from "react-native";
-import { IconBell, IconMessageCircle2, IconUserCircle } from "tabler-icons-react-native";
-import AppleIcon from "src/assets/logos/apple.png";
+import AppleIcon from "src/assets/images/home-logo.png";
 import { Text } from "@/theme";
+import { W3mButton } from "@web3modal/wagmi-react-native";
 
 type IHeader = {
   navigation: any;
@@ -16,14 +16,13 @@ const Header = ({ navigation, path }: IHeader) => (
         <View style={styles.mainhead}>
           <Image source={AppleIcon} className="w-5 h-6" />
           <Text variant="subheaderBold" gap="md">
-            Hello John
+            Hello 
           </Text>
+         
         </View>
       </TouchableNativeFeedback>
       <View style={styles.icon}>
-        <IconBell name="bell" size={21} color="#181818" />
-        <IconMessageCircle2 name="message" size={21} color="#181818" />
-        <IconUserCircle name="user" size={21} color="#181818" />
+      <W3mButton />
       </View>
     </View>
   </View>

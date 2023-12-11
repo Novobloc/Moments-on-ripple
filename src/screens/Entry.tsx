@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { StatusBar, View, StyleSheet, Image, Dimensions, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text } from "@/theme";
 import { W3mButton } from "@web3modal/wagmi-react-native";
+import { useAccount, useSendTransaction } from "wagmi";
+import { useLinkTo } from "@react-navigation/native";
+import { useFocusEffect } from "@react-navigation/native";
 
 const Entry: React.FC = ({ navigation }: any) => {
   const { height, width } = Dimensions.get("window");
+  const { isConnected } = useAccount();
+  const linkTo = useLinkTo();
+
+  useFocusEffect(
+    React.useCallback(() => {
+      console.log(isConnected, "q");
+
+      if (isConnected) {
+        linkTo("/home");
+      }
+    }, [isConnected])
+  );
 
   return (
     <View style={styles.modalContainer}>
@@ -19,18 +34,18 @@ const Entry: React.FC = ({ navigation }: any) => {
           </TouchableOpacity>
           <View style={styles.subContainer}>
             <Text variant="headerLarge" color="anchorGreenDark">
-            Embrace
+              Embrace
             </Text>
             <Text variant="headerLarge" color="anchorGreenDark">
-            the Present
+              the Present
             </Text>
             <Text variant="body" color="anchorGreenDark" paddingTop="md">
-            Capturing Timeless Moments, One Frame at a Time
+              Capturing Timeless Moments, One Frame at a Time
             </Text>
 
             <TouchableOpacity onPress={() => navigation.navigate("register")}>
               <View className="p-4 mt-6 bg-[#000000] items-center rounded-md">
-              <W3mButton label={"Connect Wallet"} connectStyle={{ backgroundColor:"black"    }}/>
+                <W3mButton label={"Connect Wallet"} connectStyle={{ backgroundColor: "black" }} />
               </View>
             </TouchableOpacity>
           </View>
@@ -47,7 +62,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "#fff",
+    backgroundColor: "#fff"
   },
   mainContainers: {
     flexDirection: "row",
@@ -63,11 +78,10 @@ const styles = StyleSheet.create({
   haveAccount: {
     flexDirection: "row",
     marginTop: 32
-  }
-  ,
+  },
   haveAccountText: {
     color: "#000",
     fontSize: 16,
     fontFamily: "Poppins_400Regular"
-  },
+  }
 });

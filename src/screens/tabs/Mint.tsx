@@ -21,7 +21,7 @@ const MintPage: React.FC = ({ navigation }: any) => {
         <View style={{ paddingTop: 16 }}>
           <Header navigation={navigation} path={"entry"} />
           <MintMain />
-          <W3mButton />
+         
         </View>
       </ScrollView>
     </SafeAreaView>

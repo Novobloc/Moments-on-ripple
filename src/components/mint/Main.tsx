@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import { View, SafeAreaView, StatusBar, Dimensions } from "react-native";
 import { Box, Text } from "@/theme";
+import UploadPicture from "src/utils/components/UploadPicture";
 
 const WelcomeTitle = () => (
   <Box paddingTop="xl">
@@ -18,7 +19,7 @@ const MintMain: React.FC = () => {
         <Box flexDirection="row" alignItems="center" justifyContent="space-between" marginHorizontal="md" width={width}>
           <View style={{ width: width - 40 }}>
             <Box flexDirection="column" justifyContent="space-between" flex={1} gap="lg">
-              <WelcomeTitle />
+              <UploadPicture />
             </Box>
           </View>
         </Box>
